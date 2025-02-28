@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News Prediction Result</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #4c86af;
+            
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        p {
+            text-align: center;
+            color: #555;
+            font-size: 18px;
+            margin-top: 20px;
+        }
+        strong {
+            color: #4CAF50;
+        }
+        .graph {
+            display: block;
+            margin: 20px auto;
+            max-width: 80%;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .prediction-box {
+          text-align: center;
+          background-color: #5bf9bf; 
+          color: #333; 
+          padding: 10px; 
+          margin: 10px auto;
+          max-width: 60%; 
+          border-radius: 8px; 
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+          }
+
+    </style>
+</head>
+<body>
+    <h1 style="font-size: 100px;">NEWS PREDICTION RESULT</h1>
+    <div class="prediction-box">
+      <p>Predicted Category: <strong style="color: #333;">{{ prediction_text }}</strong></p>
+</body>
+</html>
