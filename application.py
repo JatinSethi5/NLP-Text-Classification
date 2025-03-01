@@ -4,7 +4,7 @@ import pickle
 
 application = Flask(__name__) 
 
-# Load the trained model and label encoder
+
 model = pickle.load(open('model.pkl', 'rb'))
 
 with open('label_encoder.pkl', 'rb') as file:
@@ -19,13 +19,13 @@ def predict():
     '''
     For rendering results on HTML GUI
     '''
-    # Get input text from the form
+   
     text = request.form['text']
 
     # Convert input text into a NumPy array (modify if preprocessing is needed)
     final_features = np.array([text])  
 
-    # Predict the category (assuming the model works with raw text)
+    
     prediction = model.predict(final_features)
 
     # Convert numerical label back to category using the loaded LabelEncoder
