@@ -1,6 +1,8 @@
 import numpy as np
 from flask import Flask, request, render_template
 import pickle
+import nbimporter
+from pipeline import clean_text
 
 application = Flask(__name__) 
 
@@ -22,14 +24,15 @@ def predict():
    
     text = request.form['text']
 
-    # Convert input text into a NumPy array (modify if preprocessing is needed)
-    final_features = np.array([text])  
+    cleaned_text = clean_text(text) # preprocess text
+
+    final_text = np.array([cleaned_text])  
 
     
-    prediction = model.predict(final_features)
+    prediction_news = model.predict(final_text)
 
     # Convert numerical label back to category using the loaded LabelEncoder
-    output = label_encoder.inverse_transform(prediction)[0]  
+    output = label_encoder.inverse_transform(prediction_news)[0]  
 
     return render_template('result.html', prediction_text=f'News Category: {output}')
 
