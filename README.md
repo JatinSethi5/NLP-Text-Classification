@@ -16,7 +16,7 @@ Our team comprises of Post Baccalaureate Data Science students at the Thomposon 
 - [Jatin Sethi](https://github.com/JatinSethi5)
 - [Soumye Kumar](https://github.com/SoumyeKumar)
 - [Vishesh Khurana](https://github.com/vkay47)
-- [Solomon Maccarthy](https://github.com/fiifimac)
+- [Solomon Maccarthy](https://github.com/FiiMac)
 
 ## Project Overview
 
