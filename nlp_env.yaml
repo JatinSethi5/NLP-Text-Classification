@@ -1,0 +1,16 @@
+# install with conda env create -f nlp_env.yaml
+
+name: nlp
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - python
+  - pandas
+  - numpy
+  - scikit-learn
+  - nltk
+  - beautifulsoup4
+  - pip
+  - pip:
+    - tokenizers
